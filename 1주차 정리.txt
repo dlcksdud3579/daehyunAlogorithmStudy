@@ -1,0 +1,17 @@
+int point  const end  레퍼런스 콜로 불러라
+solve 함수 에서 풀어라 
+stoi 느림 
+map int 추가적인 컨버팅 이 필요함
+
+std::swap(p.x, p.y); - 효율적 std::move() / #include <utility>
+
+
+inline bool isOutOfBounding(Point& point) 
+{
+	return point.x < 0 || point.x >= n || point.y < 0 || point.y >= n;
+}
+
+#define 
+unit
+사용해서 상수로 
+constexpr
