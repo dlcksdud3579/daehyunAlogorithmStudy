@@ -108,10 +108,10 @@ int main()
 		}
 		solve(N);
 		if (Answer % 2) {
-			printf("Case #%d\n%.1f\n", test_case, Answer * 0.5f);
+			printf("Case #%d\n%.1lf\n", test_case, Answer * 0.5);
 		}
 		else {
-			printf("Case #%d\n%d\n", test_case, (Answer >> 1));
+			printf("Case #%d\n%lld\n", test_case, (Answer >> 1));
 		}
 	}
 
