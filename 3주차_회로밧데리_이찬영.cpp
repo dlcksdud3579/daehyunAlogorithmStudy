@@ -29,7 +29,7 @@ void read()
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
-		int temp;
+		long long temp;
 		cin >> temp;
 		xpoint[i*2] = temp*2;
 		cin >> temp;
@@ -97,7 +97,6 @@ int solve()
 		}
 	}
 
-	
 	for (int i = 0; i < yn; i++) {
 		for (int j = i + 1; j < yn; j++) {
 			long long temp = 0;
@@ -128,7 +127,7 @@ int main(int argc, char** argv)
 	   But before submission, you must remove the freopen function or rewrite comment symbols(//).
 	 */
 
-	 //freopen("input.txt", "r", stdin);
+	 freopen("input.txt", "r", stdin);
 
 	cin >> T;
 	for (test_case = 0; test_case < T; test_case++)
@@ -145,8 +144,15 @@ int main(int argc, char** argv)
 		Answer = solve();
 
 		// Print the answer to standard output(screen).
-		cout << "Case #" << test_case + 1 << endl;
-		cout << Answer / 2.0 << endl;
+		/*cout << "Case #" << test_case + 1 << endl;
+		cout << Answer / 2.0 << endl;*/
+
+		if (Answer % 2) {
+			printf("Case #%d\n%.1lf\n", test_case, Answer * 0.5);
+		}
+		else {
+			printf("Case #%d\n%lld\n", test_case, (Answer >> 1));
+		}
 	}
 
 	return 0;//Your program should return 0 on normal termination.
